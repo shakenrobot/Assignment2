@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Genres</title>
+    <link rel = "stylesheet" href="../static/moviecss.css">
+    <link rel = "stylesheet" href="../static/style2.css">
+
+</head>
+<body>
+    <div id="navbar_top">
+        <a href="/">Home</a>
+        <a href=/genres/>Genres</a>
+        <a href=/movies/>Movies</a>
+        <a href=/actors/>Actors</a>
+        <a href=/directors/>Directors</a>
+        <div id="login">
+            <a href="/login/">Login</a>
+        </div>
+        <div class="search_box">
+            <form action="/">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">
+                    <img src="../images/search_button.png" alt="Submit" width="30" height="30">
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div style="padding:40px 15px 500px;font-size:30px;margin-top:30px;">
+        <h2>Genres</h2>
+        This page should display all the genres with the movies associated.<br>
+        Clicking on a genre will take you to that genre's page.<br>
+        <strong>Not implemented yet: </strong>Need to change csv read file and model to allow for movies to be added to each genre<br><br>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Genre.." title="Type in a genre">
+
+        <table id="myTable">
+            <tr class="header">
+                <th style="width:50%;">Genres</th>
+                <th style="width:50%;">Movies</th>
+            </tr>
+            {% for genre in genres%}
+                <tr>
+                    <td>
+                        <a href="/genres/{{genre}}">{{genre}}</a>
+                    </td>
+                    <td>{{genre.movies}}</td>
+                </tr>
+
+            {% endfor %}
+        </table>
+
+        <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    }
+                    else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }</script>
+
+    </div>
+
+    <div id="navbar_bottom">
+        <a>Dennis Nieuwenhuizen - dnie495</a>
+    </div>
+
+</body>
+</html>

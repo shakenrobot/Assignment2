@@ -1,0 +1,140 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Directors</title>
+    <style>
+        body {
+  margin: 0;
+  background-color: gold;
+}
+
+#navbar_top {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+}
+
+#navbar_bottom {
+  background-color: #333;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: block;
+}
+
+#navbar_top a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#navbar_bottom a {
+  float: left;
+  display: block;
+  color: gold;
+  text-align: center;
+  bottom: 0;
+  padding: 1px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#navbar_top a:hover {
+  background-color: grey;
+  color: yellow;
+}
+
+#navbar_top .search_box {
+    float: right;
+}
+
+#navbar_top input[type=text] {
+  padding: 6px;
+  margin-top: 15px;
+  font-size: 30px;
+  border: 2px solid gold;
+  border-radius: 10px;
+  background-color: gold;
+}
+
+#navbar_top .search_box button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 15px;
+  margin-right: 16px;
+  margin-left: 2px;
+  background: gold;
+  font-size: 17px;
+  cursor: pointer;
+  border: 2px solid gold;
+  border-radius: 10px;
+}
+
+#navbar_top .search_box button:hover {
+  background: yellow;
+}
+
+#login {
+    background-color: ForestGreen;
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#login a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="navbar_top">
+        <a href="/">Home</a>
+        <a href=/genres/>Genres</a>
+        <a href=/movies/>Movies</a>
+        <a href=/actors/>Actors</a>
+        <a href=/directors/>Directors</a>
+        <div id="login">
+            <a href="/login/">Login</a>
+        </div>
+        <div class="search_box">
+            <form action="/">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">
+                    <img src="../images/search_button.png" alt="Submit" width="30" height="30">
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div style="padding:40px 15px 500px;font-size:30px;margin-top:100px;">
+        <h2>Director: {{director}}</h2>
+
+        This page should display the director and all their statistics.<br>
+        <strong>Not implemented yet:</strong> movies, actors worked with, best movie, favourite genre<br><br>
+
+        <strong>Movies: &nbsp &nbsp</strong>{{director.movies}}<br>
+
+    </div>
+
+    <div id="navbar_bottom">
+        <a>Dennis Nieuwenhuizen - dnie495</a>
+    </div>
+
+</body>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/style2.css">
+    <style>
+        .container {
+            position: relative;
+            width: 460px;
+            height: 400px;
+
+            border-radius: 25px;
+            background-color: #f2f2f2;
+             padding: 20px 0 30px 0;
+        }
+
+        test, .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            margin: 5px 0;
+            display: inline-block;
+            font-size: 17px;
+            line-height: 20px;
+            text-decoration: none;
+        }
+
+        test:hover, .btn:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar_top">
+        <a href="/">Home</a>
+        <a href=/genres/>Genres</a>
+        <a href=/movies/>Movies</a>
+        <a href=/actors/>Actors</a>
+        <a href=/directors/>Directors</a>
+        <div id="login">
+            <a href="/login/">Login</a>
+        </div>
+        <div class="search_box">
+            <form action="/">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">
+                    <img src="../images/search_button.png" alt="Submit" width="30" height="30">
+                </button>
+            </form>
+        </div>
+    </div>
+
+        <div style="padding:40px 15px 200px;font-size:30px;margin-top:200px;">
+                <center>
+                    <div class="container">
+                        <form method="POST">
+                            <p>username = test</p>
+                            <p>password = test</p>
+                            <input class ="input" type="text" name="username" placeholder="Username" required><br>
+                            <input class ="input" type="password" name="password" placeholder="Password" required><br>
+                            <input type="submit" value="login">
+                        </form>
+                    </div>
+                </center>
+            This page should display the login page<br>
+        <strong>Implementations:</strong> login box, login fields and login button<br>
+        <strong>Not implemented yet:</strong> error when a username is not in Users.csv, registering, suitable algorithm to add users, show that you are logged in on pages<br><br>
+        </div>
+
+        <div id="navbar_bottom">
+            <a>Dennis Nieuwenhuizen - dnie495</a>
+        </div>
+
+</body>
+
+</html>

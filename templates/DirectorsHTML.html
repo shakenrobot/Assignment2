@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Directors</title>
+    <link rel = "stylesheet" href="../static/moviecss.css">
+    <link rel = "stylesheet" href="../static/style2.css">
+
+</head>
+<body>
+    <div id="navbar_top">
+        <a href="/">Home</a>
+        <a href=/genres/>Genres</a>
+        <a href=/movies/>Movies</a>
+        <a href=/actors/>Actors</a>
+        <a href=/directors/>Directors</a>
+        <div id="login">
+            <a href="/login/">Login</a>
+        </div>
+        <div class="search_box">
+            <form action="/">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">
+                    <img src="../images/search_button.png" alt="Submit" width="30" height="30">
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div style="padding:40px 15px 500px;font-size:30px;margin-top:30px;">
+        <h2>Directors</h2>
+        This page should display all the directors with the movies associated.<br>
+        Clicking on a director will take you to that directors page and movies they have directed<br><br>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Director name.." title="Type in a director">
+
+        <table id="myTable">
+            <tr class="header">
+                <th style="width:25%;">Director</th>
+                <th style="width:25%;">Movie</th>
+                <th style="width:25%;">Genre</th>
+                <th style="width:25%;">Actors</th>
+            </tr>
+            {% for movie in movies%}
+                <tr>
+                    <td><a href="/directors/{{movie.director}}">{{movie.director}}</a></td>
+                    <td>
+                        {{movie}}
+                    </td>
+                    <td>
+                        {{movie.get_genre_list()}}
+                    </td>
+                    <td>
+                        {{movie.get_actor_list()}}
+                    </td>
+                </tr>
+
+            {% endfor %}
+        </table>
+
+        <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    }
+                    else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }</script>
+
+    </div>
+
+    <div id="navbar_bottom">
+        <a>Dennis Nieuwenhuizen - dnie495</a>
+    </div>
+
+</body>
+</html>

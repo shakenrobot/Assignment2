@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel = "stylesheet" href="../static/style2.css">
+
+</head>
+<body>
+    <div id="navbar_top">
+        <a href="/">Home</a>
+        <a href=/genres/>Genres</a>
+        <a href=/movies/>Movies</a>
+        <a href=/actors/>Actors</a>
+        <a href=/directors/>Directors</a>
+        <div id="login">
+            <a href="/login/">Login</a>
+        </div>
+        <div class="search_box">
+            <form action="/">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">
+                    <img src="../images/search_button.png" alt="Submit" width="30" height="30">
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <div style="padding:40px 15px 500px;font-size:30px;margin-top:30px;">
+        <p><strong>This is the home page!</strong></p>
+        <p><strong>JOURNAL:</strong></p>
+        <p>The purpose of this web application is to display pages for users to browse through movies by title, genre, actor and director.
+        This project has been a great learning experience for me in developing my coding knowledge and experience in. It has highlighted
+        the lack of experience I have coding large projects and the importance of structure and planning in a programming project.<br>
+        I heavily underestimated the amount of time needed to complete this project. I spent around 80 hours getting to the
+        stage it is at now. I could have spent half of that time if I had pre-planned early and followed of the
+        covid app provided on ian's github. For the first 30 hours I did not follow this structure at all which caused
+        lots of issues later on into the project. Having these constant bug-fixing sessions and error messages was
+        really annoying to deal with. With the vision I had and effort I had put in, I feel rather disappointment in the
+        end result I have produced for this assignment.
+        </p>
+        <p><strong>Positives:</strong></p>
+        <p>
+            <li>Have a working movie browsing section</li>
+            <li>Have an effective search function</li>
+            <li>Learnt basic css, HTML, javascript and use of WTForms/jinja</li>
+            <li>Learnt flask and flask structure for web projects</li>
+            <li>Have now learnt the value of pre-planning and designing projects before starting them</li>
+            <li>Implemented a header and footer that adjusts when the window size changes while also remaining fixed on top
+            and bottom when scrolling up and down the page</li>
+        </p>
+        <p><strong>Negatives:</strong></p>
+        <p>
+            <li>Didn't implement the repository correctly in the project</li>
+            <li>Couldn't get "flask run" to work due to my directory structure</li>
+            <li>Couldn't get Login/password to work well unless username is in Users.csv (need to re-learn how to do this better)</li>
+            <li>Implemented a search bar in the header that ended up not being used</li>
+            <li>Wasn't able to get genres, actors and directors to have movies connected to them (over-complicating the process)</li>
+        </p>
+        <p>Overall, I have learnt a lot from this project and will take a lot of this new knowledge for my upcoming career.
+        I realize now that I should have closely followed the covid model to simplify the process and be able to get better marks.
+            This assignment project wasn't what I had hoped i'd finish with. Yet, it has taught me a lot about what real world
+        programming is like and I hope i'll receive individual feedback from the markers on how I can improve for my next project.</p>
+
+        <strong>Links:</strong><br>
+
+        <a href="/">http://127.0.0.1:5000</a><br>
+        <a href=/login/>http://127.0.0.1:5000/login</a><br>
+        <a href=/genres/>http://127.0.0.1:5000/genres</a><br>
+        <a href=/genres/genre/>http://127.0.0.1:5000/genres/genre</a><br>
+        <a href=/actors/>http://127.0.0.1:5000/actors</a><br>
+        <a href=/actors/actor/>http://127.0.0.1:5000/actors/actor</a><br>
+        <a href=/movies/>http://127.0.0.1:5000/movies</a><br>
+        <a href=/movies/1>http://127.0.0.1:5000/movies/movie</a><br>
+        <a href=/directors/>http://127.0.0.1:5000/directors</a><br>
+        <a href=/directors/director>http://127.0.0.1:5000/directors/director</a><br>
+    </div>
+
+    <div id="navbar_bottom">
+        <a>Dennis Nieuwenhuizen - dnie495</a>
+    </div>
+
+</body>
+</html>
